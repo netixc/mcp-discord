@@ -1,0 +1,31 @@
+[project]
+name = "mcp-discord"
+version = "0.1.0"
+description = "Discord integration for Model Context Protocol"
+authors = [
+    {name = "Jawad Bly", email = "jboulyou@gmail.com"},
+]
+dependencies = [
+    "discord.py>=2.3.0",
+    "mcp>=0.1.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.urls]
+Homepage = "https://github.com/netixc/mcp-discord"
+Repository = "https://github.com/netixc/mcp-discord.git"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/discord_mcp"]
+
+[project.scripts]
+mcp-discord = "discord_mcp:main"
