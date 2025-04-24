@@ -47,7 +47,7 @@ cd mcp-discord
 
 # Create and activate virtual environment
 uv venv
-.venv\Scripts\activate
+source .venv/bin/activate
 
 ### If using Python 3.13+ 
 uv pip install audioop-lts
